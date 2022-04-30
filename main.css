@@ -1,0 +1,112 @@
+canvas{
+    pointer-events : auto;
+    margin-left:120px;
+    border:2px solid;
+}
+
+table,td,th{
+	border: 1px solid #ddd;
+    border-collapse: collapse;
+    padding: 2px;
+}
+
+textarea{
+    resize:none;
+    overflow:auto;
+}
+
+hr{
+    width:80%;
+    margin-top:10px;
+}
+
+legend{
+    margin-bottom: 0px;
+}
+
+button{
+    background-color: #e7e7e7; 
+    color: black;
+    border:none;
+    padding: 5px 5px;
+}
+
+button:hover{
+    background-color: grey;
+    color: white;
+}
+
+.border-dark{
+    border-color: white;
+}
+
+.content {
+    padding-top: 3%;
+    display: flex;
+    justify-content: center;   
+}
+
+.content > button{
+    margin : 5px;
+}
+
+.dark-mode{
+    color: white;
+}
+
+.body-dark{
+    background-color: black;
+}
+
+.highlight{
+    background-color:hsl(120,60%,70%);
+}
+
+.highlight-dark{
+    background-color:white;
+    color: black;
+}
+
+#string_input{
+    border: 1px solid gray;
+}
+
+#arrow_menu{
+	max-width: 110px;
+	box-shadow: 5px 5px 5px 0px #888888;
+	position: absolute;
+	display:none;
+    border: 2px solid;
+    background-color:gray;
+}
+
+#arrow_menu input[type="text"]{
+	width: 45px;
+	border: none;
+}
+
+#io_table{
+   float:right; 
+   width:140px;
+   min-width:120px;
+   table-layout:fixed;
+}
+
+#io_table td{
+	max-width: 100px;
+	word-wrap: break-word;
+}
+
+#input_box{
+    max-width: 182px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#branches{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    height: 50px;
+}
+

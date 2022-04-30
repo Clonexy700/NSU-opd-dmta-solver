@@ -1,0 +1,38 @@
+{
+  "name": "@shailpatels/fss",
+  "version": "1.0.5",
+  "description": "Finite State Simulator",
+  "main": "canvas.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "cypress": "^8.7.0",
+    "jest": "^27.3.1",
+    "jest-esm-transformer": "^1.0.0",
+    "serve": "^11.3.2"
+  },
+  "scripts": {
+    "test": "npx jest  --config jest.config.js --coverage",
+    "build": "./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shailpatels/FSS.git"
+  },
+  "author": "Shail Patel",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/shailpatels/FSS/issues"
+  },
+  "homepage": "https://github.com/shailpatels/FSS#readme",
+  "keywords": [
+    "finite",
+    "state",
+    "machines"
+  ],
+  "files": [
+    "src"
+  ]
+}

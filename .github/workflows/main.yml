@@ -1,0 +1,40 @@
+name: CI
+
+on: [push, pull_request]
+
+env:
+  NODE_VERSION: 12
+
+jobs:
+  
+
+  unit-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: npm install --production=false
+      - name: Run tests
+        run: npm test
+
+  e2e-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.2
+        with:
+          node-version:  ${{ env.NODE_VERSION }}
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+            path: ~/.npm
+            key: ${{ runner.os }}-cache-node-modules-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+                 ${{ runner.os }}-cache-node-modules-
+      - run: npm install --production=false
+      - name: cypress runs
+        uses: cypress-io/github-action@v2
+        with: 
+          start: npx serve
+

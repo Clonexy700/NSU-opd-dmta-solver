@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FSS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+<body>
+    <header>
+        <b-navbar toggleable="lg" type="light">
+            <b-navbar-brand @click="showNav = false" :to="{name:'Home'}" v-if="$route.name!='Home' || mobile"><img src="/favicon.png" height="40" class="invertir"></b-navbar-brand>
+
+            <b-button @click="showNav = !showNav" type="button" variant="transparent" class="text-white d-lg-none d-inline-block ml-auto">
+                <i class="fas fa-bars p-0" v-if="!showNav"></i>
+                <i class="fas fa-times p-0" v-else></i>
+            </b-button>
+
+            <b-collapse class="p-0" id="nav-collapse" is-nav v-model="showNav">
+                <b-navbar-nav :class="{'mx-auto':$route.name=='Home'}">
+                    <a href="/index.html" title="О сервисе" onclick="slowScroll('#main')">О сервисе</a>
+                    <a href="/stateMachine.html" title="Конечные автоматы" onclick="slowScroll('#overview')">Конечные автоматы</a>
+                    <a href="/turingMachine.html" title="Контакты" onclick="slowScroll('#contacts')">Машина Тьюринга</a>
+                    <a href="/about.html" title="Ответы на вопросы" onclick="slowScroll('#faq')">Информация</a>
+                </b-navbar-nav>
+            </b-collapse>
+        </b-navbar>
+    </header>
+    <div>
+        <div class="text-dark my-4">
+            <p class="my-2 font-weight-bold h5">Контроль версий</p>
+            <div class="container rounded border border-light p-3" style="height:50vh; overflow: auto">
+                <div>
+                    <p class=" font-weight-bold my-0 h5">1.7</p>
+                    <ul>
+                        <li>Дизайн Машин Тьюринга и симуляция ленты</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class=" font-weight-bold my-0 h5">1.6</p>
+                    <ul>
+                        <li>Добавлен модуль Машин Тьюринга</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class=" font-weight-bold my-0 h5">1.5</p>
+                    <ul>
+                        <li>Добавлены автоматы с магазинной памятью</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class=" font-weight-bold my-0 h5">1.4</p>
+                    <ul>
+                        <li>Добавлена функция просмотра автомата, который на данный момент введён</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class=" font-weight-bold my-0 h5">1.3</p>
+                    <ul>
+                        <li>Добавлена функция просмотра автомата, который есть в истории</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class=" font-weight-bold my-0 h5">1.2</p>
+                    <ul>
+                        <li>Добавлена история, в которой отображаются автоматы, с помощью которых проверялось слово</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class=" font-weight-bold my-0 h5">1.1</p>
+                    <ul>
+                        <li>Добавлена возможность удалять состояния и переходы</li>
+                        <li>Добавлена документация пользователя</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class=" font-weight-bold my-0 h5">1.0</p>
+                    <ul>
+                        <li>Распознаватель слов в конечных автоматах, вводимый через таблицу переходов</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class=" font-weight-bold my-0 h5">0.9</p>
+                    <ul>
+                        <li>Создание базовой версии</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <Instalar v-if="showInstall" :deferredPrompt="deferredPrompt" />
+    </div>
+</body>
+
+</html>
+
+<style>
+    body {
+        padding-top: 4%;
+    }
+    
+    header {
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+</style>

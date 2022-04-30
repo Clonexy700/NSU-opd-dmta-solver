@@ -1,182 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>FSS</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="main.css">
-        
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>FSS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
 
 <body>
-<header>
-    <b-navbar toggleable="lg" type="light">
-        <b-navbar-brand @click="showNav = false" :to="{name:'Home'}" v-if="$route.name!='Home' || mobile"><img src="/favicon.png" height="40" class="invertir"></b-navbar-brand>
+    <header>
+        <b-navbar toggleable="lg" type="light">
+            <b-navbar-brand @click="showNav = false" :to="{name:'Home'}" v-if="$route.name!='Home' || mobile"><img src="/favicon.png" height="40" class="invertir"></b-navbar-brand>
 
-        <b-button @click="showNav = !showNav" type="button" variant="transparent" class="text-white d-lg-none d-inline-block ml-auto">
-            <i class="fas fa-bars p-0" v-if="!showNav"></i>
-            <i class="fas fa-times p-0" v-else></i>
-        </b-button>
+            <b-button @click="showNav = !showNav" type="button" variant="transparent" class="text-white d-lg-none d-inline-block ml-auto">
+                <i class="fas fa-bars p-0" v-if="!showNav"></i>
+                <i class="fas fa-times p-0" v-else></i>
+            </b-button>
 
-        <b-collapse class="p-0" id="nav-collapse" is-nav v-model="showNav">
-            <b-navbar-nav :class="{'mx-auto':$route.name=='Home'}">
-                <a href="/index.html" title="О сервисе" onclick="slowScroll('#main')">О сервисе</a>
-                <a href="/stateMachine.html" title="Конечные автоматы" onclick="slowScroll('#overview')">Конечные автоматы</a>
-                <a href="/turingMachine.html" title="Контакты" onclick="slowScroll('#contacts')">Машина Тьюринга</a>
-                <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">Информация</a>
-            </b-navbar-nav>
-        </b-collapse>
-    </b-navbar>
-</header>
-<body>
-  <h3 class="text-center py-2 mb-3 font-weight-bold">Симулятор Машины Тьюринга</h3>
-  <hr>
-  <div class="app">
-    <form action="" onsubmit="return false;">
+            <b-collapse class="p-0" id="nav-collapse" is-nav v-model="showNav">
+                <b-navbar-nav :class="{'mx-auto':$route.name=='Home'}">
+                    <a href="/index.html" title="О сервисе" onclick="slowScroll('#main')">О сервисе</a>
+                    <a href="/stateMachine.html" title="Конечные автоматы" onclick="slowScroll('#overview')">Конечные автоматы</a>
+                    <a href="/turingMachine.html" title="Контакты" onclick="slowScroll('#contacts')">Машина Тьюринга</a>
+                    <a href="/about.html" title="Ответы на вопросы" onclick="slowScroll('#faq')">Информация</a>
+                </b-navbar-nav>
+            </b-collapse>
+        </b-navbar>
+    </header>
 
-        <div id="tableblock" class="mx-auto my-2">
-        <table id="table_rules" class="mx-auto my-2">
-          <tr id="alphabet">
-            <td id="corner"></td>
-            <td class="spectd"><input type="text" value="0"></td>
-            <td class="spectd"><input type="text" value="1"></td>
-          </tr>
-          <tr>
-            <td class="state">q1</td>
-            <td><input type="text" class="rule" value="-"></td>
-            <td><input type="text" class="rule" value="0Rq2"></td>
-          </tr>
-          <tr>
-            <td class="state">q2</td>
-            <td><input type="text" class="rule" value="0Rq5"></td>
-            <td><input type="text" class="rule" value="1Rq3"></td>
-          </tr>
-          <tr>
-            <td class="state">q3</td>
-            <td><input type="text" class="rule" value="1Lq4"></td>
-            <td><input type="text" class="rule" value="1Rq3"></td>
-          </tr>
-          <tr>
-            <td class="state">q4</td>
-            <td><input type="text" class="rule" value="1Nq0"></td>
-            <td><input type="text" class="rule" value="1Lq4"></td>
-          </tr>
-          <tr>
-            <td class="state">q5</td>
-            <td><input type="text" class="rule" value="0Nq5"></td>
-            <td><input type="text" class="rule" value="0Rq5"></td>
-          </tr>
-          <tr>
-            <td class="state">q6</td>
-            <td><input type="text" class="rule" value="1Nq0"></td>
-            <td><input type="text" class="rule" value="-"></td>
-          </tr>
+    <body>
+        <h3 class="text-center py-2 mb-3 font-weight-bold">Симулятор Машины Тьюринга</h3>
+        <hr>
+        <div class="app">
+            <form action="" onsubmit="return false;">
 
-          
-        </table>
-        </div>
+                <div id="tableblock" class="mx-auto my-2">
+                    <table id="table_rules" class="mx-auto my-2">
+                        <tr id="alphabet">
+                            <td id="corner"></td>
+                            <td class="spectd"><input type="text" value="0"></td>
+                            <td class="spectd"><input type="text" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td class="state">q1</td>
+                            <td><input type="text" class="rule" value="-"></td>
+                            <td><input type="text" class="rule" value="0Rq2"></td>
+                        </tr>
+                        <tr>
+                            <td class="state">q2</td>
+                            <td><input type="text" class="rule" value="0Rq5"></td>
+                            <td><input type="text" class="rule" value="1Rq3"></td>
+                        </tr>
+                        <tr>
+                            <td class="state">q3</td>
+                            <td><input type="text" class="rule" value="1Lq4"></td>
+                            <td><input type="text" class="rule" value="1Rq3"></td>
+                        </tr>
+                        <tr>
+                            <td class="state">q4</td>
+                            <td><input type="text" class="rule" value="1Nq0"></td>
+                            <td><input type="text" class="rule" value="1Lq4"></td>
+                        </tr>
+                        <tr>
+                            <td class="state">q5</td>
+                            <td><input type="text" class="rule" value="0Nq5"></td>
+                            <td><input type="text" class="rule" value="0Rq5"></td>
+                        </tr>
+                        <tr>
+                            <td class="state">q6</td>
+                            <td><input type="text" class="rule" value="1Nq0"></td>
+                            <td><input type="text" class="rule" value="-"></td>
+                        </tr>
+
+
+                    </table>
+                </div>
                 <div class="row col-12 mx-auto text-center my-3 text-center">
-        <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="asym">
+                    <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="asym">
         +1 символ
       </button>
-        <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="rsym">
+                    <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="rsym">
         -1 символ
       </button>
-        <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="astate">
+                    <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="astate">
         +1 состояние
       </button>
-        <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="rstate">
+                    <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="rstate">
         -1 состояние
       </button>
-          </div>
-      
-          <h2 class="text-center py-2 mb-3 font-weight-bold">Ввод</h2>
-      <div id="input_tapeblock" class="mx-auto my-2">
-        <input type="text" name="tapeinput" id="tapeinput" value="11110111"><label for="tapeinput" accesskey="t"></label>
-      </div>
-    </form>
+                </div>
 
-    <div class="tapeblock mx-auto my-2">
-      <h2 class="text-center py-2 mb-3 font-weight-bold">Вывод</h2>
-      <p id="temptape" class="mx-auto my-2"></p>
-    </div>
-        <div class="row col-12 mx-auto text-center my-3 text-center">
-    <button id="run" class="btn col-lg col-12 btn-success my-2 mx-auto m-md-2">запустить</button>
-    <button id="clear" class="btn col-lg col-12 btn-success my-2 mx-auto m-md-2">очистить</button>
-    <button id="step" class="btn col-lg col-12 btn-success my-2 mx-auto m-md-2">1 шаг</button>
-    </div>
-  </div>
-  <script src="/src/turingmachine.js"></script>
-  </body>
+                <h2 class="text-center py-2 mb-3 font-weight-bold">Ввод</h2>
+                <div id="input_tapeblock" class="mx-auto my-2">
+                    <input type="text" name="tapeinput" id="tapeinput" value="11110111"><label for="tapeinput" accesskey="t"></label>
+                </div>
+            </form>
 
-  </html>
+            <div class="tapeblock mx-auto my-2">
+                <h2 class="text-center py-2 mb-3 font-weight-bold">Вывод</h2>
+                <p id="temptape" class="mx-auto my-2"></p>
+            </div>
+            <div class="row col-12 mx-auto text-center my-3 text-center">
+                <button id="run" class="btn col-lg col-12 btn-success my-2 mx-auto m-md-2">запустить</button>
+                <button id="clear" class="btn col-lg col-12 btn-success my-2 mx-auto m-md-2">очистить</button>
+                <button id="step" class="btn col-lg col-12 btn-success my-2 mx-auto m-md-2">1 шаг</button>
+            </div>
+        </div>
+        <script src="/src/turingmachine.js"></script>
+    </body>
 
-  <style>
+</html>
 
-body {
-  padding-top: 4%;
-}
-
-header{
-   background: #fff;
-
-   position: fixed;
-
-   top: 0;
-
-   left: 0;
-
-   width: 100%;
-
-   z-index: 999px;
-
-   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
-
-   text-align: center;
-
-}
-
-h1 {
-    padding-top: 3%;
-}
-
-ul{
-    list-style-type: disc;
-}
-
-input {
-  border: 0;
-}
-
-#input_tapeblock {
-  align-self: center;
-  display: block;
-	max-width: 300px;
-	width: 80%;
-	height: 48pt;
-	border: 1px solid black;
-	border-radius: 8px;
-	padding: 5px 0 5px 5px;
-	text-indent: 5px;
-	overflow: hidden;
-}
-
-#temptape {
-  align-self: center;
-	display: block;
-	max-width: 300px;
-	width: 80%;
-	height: 48pt;
-	border: 1px solid black;
-	border-radius: 8px;
-	padding: 5px 0 5px 5px;
-	text-indent: 5px;
-	overflow: hidden;
-}
-
-  </style>
-
+<style>
+    body {
+        padding-top: 4%;
+    }
+    
+    header {
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+    
+    h1 {
+        padding-top: 3%;
+    }
+    
+    ul {
+        list-style-type: disc;
+    }
+    
+    input {
+        border: 0;
+    }
+    
+    #input_tapeblock {
+        align-self: center;
+        display: block;
+        max-width: 300px;
+        width: 80%;
+        height: 48pt;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 5px 0 5px 5px;
+        text-indent: 5px;
+        overflow: hidden;
+    }
+    
+    #temptape {
+        align-self: center;
+        display: block;
+        max-width: 300px;
+        width: 80%;
+        height: 48pt;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 5px 0 5px 5px;
+        text-indent: 5px;
+        overflow: hidden;
+    }
+</style>

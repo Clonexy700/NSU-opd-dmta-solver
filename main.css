@@ -1,6 +1,7 @@
 canvas {
     pointer-events: auto;
-    margin-left: 120px;
+    margin-left: auto;
+    display: block;
     border: 2px solid;
 }
 
@@ -31,7 +32,6 @@ legend {
 }
 
 .content {
-    padding-top: 3%;
     display: flex;
     justify-content: center;
 }
@@ -76,7 +76,6 @@ legend {
 }
 
 #io_table {
-    float: right;
     width: 140px;
     min-width: 120px;
     table-layout: fixed;

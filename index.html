@@ -12,83 +12,94 @@
 </head>
 
 <body style="font-family: titillium-web">
-    <b-navbar toggleable="lg" type="light">
-        <b-navbar-brand @click="showNav = false" :to="{name:'Home'}" v-if="$route.name!='Home' || mobile"><img src="/favicon.png" height="40" class="invertir"></b-navbar-brand>
-
-        <b-button @click="showNav = !showNav" type="button" variant="transparent" class="text-white d-lg-none d-inline-block ml-auto">
-            <i class="fas fa-bars p-0" v-if="!showNav"></i>
-            <i class="fas fa-times p-0" v-else></i>
-        </b-button>
-
-        <b-collapse class="p-0" id="nav-collapse" is-nav v-model="showNav">
-            <b-navbar-nav :class="{'mx-auto':$route.name=='Home'}">
-                <a href="/index.html" title="О сервисе" onclick="slowScroll('#main')">О сервисе</a>
-                <a href="/stateMachine.html" title="Конечные автоматы" onclick="slowScroll('#overview')">Конечные автоматы</a>
-                <a href="/turingMachine.html" title="Контакты" onclick="slowScroll('#contacts')">Машина Тьюринга</a>
-                <a href="/about.html" title="Ответы на вопросы" onclick="slowScroll('#faq')">Информация</a>
-            </b-navbar-nav>
-        </b-collapse>
-    </b-navbar>
-
-    <div class="clear"></div>
+    <div id="page">
+        <header>
 
 
-    <div class="bg-light">
-        <div class="banner position-relative mx-auto w-100 my-auto align-middle text-center" style="padding-top:10rem;">
-            <div class="text-center text-light font-titillium-web mb-2" :class="{'display-4':!mobile, 'h1':mobile}">
-                <h1>В рамках курса ОПД предоставляем вам сервис</h1>
-            </div>
-            <div class="text-center text-light font-weight-bold mx-lg-auto d-inline-block bg-light rounded p-2 mx-3" :class="{'display-4':!mobile, 'h1':mobile}">
-                <h1 class="mx-auto">
-                    <p class="rounded mx-auto d-inline-block rta my-0 pb-1 "> DMTA MLITA SOLVER</p>
-                </h1>
-            </div>
-            <div class="scroll-icon">
-                <a href="#herramientas">
-                    <i class="fa fa-chevron-down fa-2x text-white"></i>
-                </a>
-            </div>
-        </div>
-        <div class="container" :class="{'p-herramientas':$route.hash=='#herramientas'}" id="herramientas">
-            <h3>На данный момент в сервисе реализован следующий функционал:</h3>
-            <div class="row mx-auto pt-3">
-                <div class="col-12 col-lg">
-                    <ul class="px-2 mx-3">
-                        <li>Модули доступные сейчас:
+            <div class="menu_block">
+
+
+                <div class="container clearfix">
+
+
+                    <div class="logo">
+                        <a href="/index.html"><span class="b1">S</span><span class="b2">O</span><span class="b3">L</span><span class="b4">V</span><span class="b5">E</span><span class="b5">R</span></a>
+                    </div>
+
+
+                    <div class="">
+                        <nav class="navmenu center">
                             <ul>
-                                <li>Конечные автоматы</li>
-                                <li>Машина Тьюринга</li>
+                                <li class="first active scroll_btn"><a href="/index.html">О сервисе</a></li>
+                                <li class="scroll_btn"><a href="/stateMachine.html">Конечные автоматы</a></li>
+                                <li class="scroll_btn"><a href="/turingMachine.html">Машины Тьюринга</a></li>
+                                <li class="scroll_btn"><a href="/about.html">Новости</a></li>
                             </ul>
-                        </li>
-                        <li>сервис позволяет проверять задачи/визуализировать объекты и модели/строить и проверять выражения в области ДМТА и Математической Логики. К сервису можно добавить пользовательский модуль, тем самым расширив его изначальный функционал
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-12 col-lg my-auto">
-                    <img src="/img/fms.png" class="img-fluid d-block mx-auto rounded" style="max-height:200px;">
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container mt-3" id=galeria>
-            <h3>Внешний вид и изображения</h3>
-            <div class="row mx-auto">
-                <div class="col-12 col-lg-8 row mx-0 my-2 pr-lg-1">
-                    <div class="col px-0 mr-1 my-auto">
-                        <img src="/img/fms-4.png" class="img-fluid mx-auto rounded border p-1 mb-2 bg-white" alt="">
-                        <img src="/img/fms-5.png" class="img-fluid mx-auto rounded border p-1 bg-white" alt="">
-                        <img src="/img/fms-6.png" class="img-fluid mx-auto rounded border p-1 mt-2 bg-white d-none d-lg-inline-block" alt="">
+        </header>
+
+        <div class="clear"></div>
+
+
+        <div class="bg-fff">
+            <div class="banner position-relative mx-auto w-100 my-auto align-middle text-center" style="padding-top:10rem;">
+                <div class="text-center text-light font-titillium-web mb-2" :class="{'display-4':!mobile, 'h1':mobile}">
+                    <h1>В рамках курса ОПД предоставляем вам сервис</h1>
+                </div>
+                <div class="text-center text-light font-weight-bold mx-lg-auto d-inline-block bg-light rounded p-2 mx-3" :class="{'display-4':!mobile, 'h1':mobile}">
+                    <h1 class="mx-auto">
+                        <p class="rounded mx-auto d-inline-block rta my-0 pb-1 "> DMTA MLITA SOLVER</p>
+                    </h1>
+                </div>
+                <div class="scroll-icon">
+                    <a href="#herramientas">
+                        <i class="fa fa-chevron-down fa-2x text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="container" :class="{'p-herramientas':$route.hash=='#herramientas'}" id="herramientas">
+                <h3>На данный момент в сервисе реализован следующий функционал:</h3>
+                <div class="row mx-auto pt-3">
+                    <div class="col-12 col-lg">
+                        <ul class="px-2 mx-3">
+                            <li>Модули доступные сейчас:
+                                <ul>
+                                    <li>Конечные автоматы</li>
+                                    <li>Машина Тьюринга</li>
+                                </ul>
+                            </li>
+                            <li>сервис позволяет проверять задачи/визуализировать объекты и модели/строить и проверять выражения в области ДМТА и Математической Логики. К сервису можно добавить пользовательский модуль, тем самым расширив его изначальный функционал
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-8 px-0 ml-1 my-auto">
-                        <img src="/img/fms-2.png" class="img-fluid mx-auto rounded border p-1" alt="">
+                    <div class="col-12 col-lg my-auto">
+                        <img src="/img/fms.png" class="img-fluid d-block mx-auto rounded" style="max-height:200px;">
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 mx-auto my-2 pl-lg-1">
-                    <img src="" class="img-fluid mx-auto rounded border p-1 bg-white" alt="">
+            </div>
+            <div class="container mt-3" id=galeria>
+                <h3>Внешний вид и изображения</h3>
+                <div class="row mx-auto">
+                    <div class="col-12 col-lg-8 row mx-0 my-2 pr-lg-1">
+                        <div class="col px-0 mr-1 my-auto">
+                            <img src="/img/fms-4.png" class="img-fluid mx-auto rounded border p-1 mb-2 bg-white" alt="">
+                            <img src="/img/fms-5.png" class="img-fluid mx-auto rounded border p-1 bg-white" alt="">
+                            <img src="/img/fms-6.png" class="img-fluid mx-auto rounded border p-1 mt-2 bg-white d-none d-lg-inline-block" alt="">
+                        </div>
+                        <div class="col-8 px-0 ml-1 my-auto">
+                            <img src="/img/fms-2.png" class="img-fluid mx-auto rounded border p-1" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mx-auto my-2 pl-lg-1">
+                        <img src="" class="img-fluid mx-auto rounded border p-1 bg-white" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 
 </body>
 

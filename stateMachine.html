@@ -61,88 +61,88 @@
             </div>
         </header>
 
-
-
-        <h1 class="content">Конечные автоматы</h1>
-        <div style="max-width:1300px;margin-left:auto;margin-right:auto;">
-            <canvas id="canvas" tabindex="1" width="2000" height="1000" oncontextmenu="return false;">
+        <div id="box" class="mx-auto my-2 container rounded border border-dark p-3 bg-fff" style="height:85vh; overflow: auto">
+            <h1 class="content">Конечные автоматы</h1>
+            <div style="max-width:1300px;">
+                <canvas class="mx-auto" id="canvas" tabindex="1" width="2000" height="1000" oncontextmenu="return false;">
 			This browser does not support HTML5 canvas
         </canvas>
 
-            <table id="io_table">
-                <tr>
-                    <th> Вход </th>
-                    <th> Статус </th>
-                </tr>
+                <table class="text-center align-middle my-auto mx-auto mt-2" id="io_table">
+                    <tr class="text-center py-2 mb-3 font-weight-bold">
+                        <th> Вход </th>
+                        <th> Статус </th>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div id="branches">
+                <button style="display: none;" id="branch-all">All</button>
+            </div>
+
+            <br>
+
+            <div class="content">
+                <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="stp_btn">Шаг</button>
+                <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="run_btn">Запустить</button>
+                <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="draw_btn">Нарисовать таблицу</button>
+                <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="clear_btn">Очистить</button>
+                <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="reset_btn">Сбросить симуляцию</button>
+            </div>
+            <br>
+
+            <fieldset id="input_box">
+                <legend>Ввести строку:</legend>
+                <input type="text" id="string_input" />
+                <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="submit_btn"> ввести </button>
+            </fieldset>
+
+            <br>
+
+            <table id="t_table" style="margin-left:auto; margin-right:auto;margin-bottom: 5px;">
             </table>
 
-        </div>
-
-        <div id="branches">
-            <button style="display: none;" id="branch-all">All</button>
-        </div>
-
-        <br>
-
-        <div class="content">
-            <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="stp_btn">Шаг</button>
-            <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="run_btn">Запустить</button>
-            <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="draw_btn">Нарисовать таблицу</button>
-            <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="clear_btn">Очистить</button>
-            <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="reset_btn">Сбросить симуляцию</button>
-        </div>
-        <br>
-
-        <fieldset id="input_box">
-            <legend>Ввести строку:</legend>
-            <input type="text" id="string_input" />
-            <button class="btn btn-outline-success rounded-pill d-block font-weight-bold" id="submit_btn"> ввести </button>
-        </fieldset>
-
-        <br>
-
-        <table id="t_table" style="margin-left:auto; margin-right:auto;margin-bottom: 5px;">
-        </table>
-
-        <div class="content" id="saves">
-            <span id="save0">
+            <div class="content" id="saves">
+                <span id="save0">
             <button class="btn btn-success my-2 mx-auto m-md-2" id="save_btn" >Сохранить</button>
             <button class="btn btn-success my-2 mx-auto m-md-2" id="load_btn">Загрузить</button>
         </span>
-        </div>
+            </div>
 
-        <!-- menu for new arrows -->
-        <div id="arrow_menu" class="arrow_menu">
-            <input id="if_" type="text" name="">
-            <!-- Output used for models of computation like PDAs or TMs -->
-            <!-- <input id="out" type="text" name=""> -->
-        </div>
+            <!-- menu for new arrows -->
+            <div id="arrow_menu" class="arrow_menu">
+                <input id="if_" type="text" name="">
+                <!-- Output used for models of computation like PDAs or TMs -->
+                <!-- <input id="out" type="text" name=""> -->
+            </div>
 
-        <br>
+            <br>
 
-        <div class="content">
-            Гайд
-            <input id="toggle_dark" type="checkbox" />
-        </div>
+            <div class="content">
+                Гайд
+                <input id="toggle_dark" type="checkbox" />
+            </div>
 
-        <hr>
-
-
+            <hr>
 
 
-        <div class="content">
-            <ul style="list-style-type:none;">
-                <li>Double-click to add a new state</li>
-                <li>Left-click & drag to move a state/connection</li>
-                <li>Shift + left-click to add a connection between states</li>
-                <li>Right click to delete a state</li>
-            </ul>
-            <ul style="list-style-type:none;">
-                <li>Enter a string as input for the FSM</li>
-                <li>A string can be submitted multiple times</li>
-                <li>Press step to simulate the FSM against the input</li>
-                <li>Reset will reset the simulation</li>
-            </ul>
+
+
+            <div class="content">
+                <ul style="list-style-type:none;">
+                    <li>Double-click to add a new state</li>
+                    <li>Left-click & drag to move a state/connection</li>
+                    <li>Shift + left-click to add a connection between states</li>
+                    <li>Right click to delete a state</li>
+                </ul>
+                <ul style="list-style-type:none;">
+                    <li>Enter a string as input for the FSM</li>
+                    <li>A string can be submitted multiple times</li>
+                    <li>Press step to simulate the FSM against the input</li>
+                    <li>Reset will reset the simulation</li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -195,9 +195,12 @@
         color: #000;
     }
     
+    #box {
+        background-color: #fff;
+    }
+    
     body {
         overflow-x: hidden;
-        position: relative;
         margin: 0;
         padding: 0;
         font-family: 'Roboto', sans-serif;
@@ -205,7 +208,9 @@
         font-size: 13px;
         line-height: 20px;
         color: #666;
-        background-color: #fff;
+        background-image: url('https://mca.nsu.ru/mmfstyle/images/tild3561-6531-4139-a530-653764333734___916.svg');
+        background-size: cover;
+        padding-top: 2%;
     }
     
     #page {

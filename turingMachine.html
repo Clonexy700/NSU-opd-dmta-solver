@@ -48,84 +48,86 @@
         </header>
 
         <body>
-            <h3 class="text-center py-2 mb-3 font-weight-bold">Симулятор Машины Тьюринга</h3>
-            <hr>
-            <div class="app">
-                <form action="" onsubmit="return false;">
+            <div id="box" class="container rounded border border-dark p-3 bg-fff" style="height:80vh; overflow: auto">
+                <h3 class="text-center py-2 mb-3 font-weight-bold">Симулятор Машины Тьюринга</h3>
+                <hr>
+                <div class="app">
+                    <form action="" onsubmit="return false;">
 
-                    <div id="tableblock" class="mx-auto my-2">
-                        <table id="table_rules" class="mx-auto my-2">
-                            <tr id="alphabet">
-                                <td id="corner"></td>
-                                <td class="spectd"><input type="text" value="0"></td>
-                                <td class="spectd"><input type="text" value="1"></td>
-                            </tr>
-                            <tr>
-                                <td class="state">q1</td>
-                                <td><input type="text" class="rule" value="-"></td>
-                                <td><input type="text" class="rule" value="0Rq2"></td>
-                            </tr>
-                            <tr>
-                                <td class="state">q2</td>
-                                <td><input type="text" class="rule" value="0Rq5"></td>
-                                <td><input type="text" class="rule" value="1Rq3"></td>
-                            </tr>
-                            <tr>
-                                <td class="state">q3</td>
-                                <td><input type="text" class="rule" value="1Lq4"></td>
-                                <td><input type="text" class="rule" value="1Rq3"></td>
-                            </tr>
-                            <tr>
-                                <td class="state">q4</td>
-                                <td><input type="text" class="rule" value="1Nq0"></td>
-                                <td><input type="text" class="rule" value="1Lq4"></td>
-                            </tr>
-                            <tr>
-                                <td class="state">q5</td>
-                                <td><input type="text" class="rule" value="0Nq5"></td>
-                                <td><input type="text" class="rule" value="0Rq5"></td>
-                            </tr>
-                            <tr>
-                                <td class="state">q6</td>
-                                <td><input type="text" class="rule" value="1Nq0"></td>
-                                <td><input type="text" class="rule" value="-"></td>
-                            </tr>
+                        <div id="tableblock" class="mx-auto my-2">
+                            <table id="table_rules" class="text-center align-middle my-auto mx-auto mt-2">
+                                <tr id="alphabet">
+                                    <td id="corner"></td>
+                                    <td class="spectd"><input type="text" value="0"></td>
+                                    <td class="spectd"><input type="text" value="1"></td>
+                                </tr>
+                                <tr>
+                                    <td class="state">q1</td>
+                                    <td><input type="text" class="rule" value="-"></td>
+                                    <td><input type="text" class="rule" value="0Rq2"></td>
+                                </tr>
+                                <tr>
+                                    <td class="state">q2</td>
+                                    <td><input type="text" class="rule" value="0Rq5"></td>
+                                    <td><input type="text" class="rule" value="1Rq3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="state">q3</td>
+                                    <td><input type="text" class="rule" value="1Lq4"></td>
+                                    <td><input type="text" class="rule" value="1Rq3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="state">q4</td>
+                                    <td><input type="text" class="rule" value="1Nq0"></td>
+                                    <td><input type="text" class="rule" value="1Lq4"></td>
+                                </tr>
+                                <tr>
+                                    <td class="state">q5</td>
+                                    <td><input type="text" class="rule" value="0Nq5"></td>
+                                    <td><input type="text" class="rule" value="0Rq5"></td>
+                                </tr>
+                                <tr>
+                                    <td class="state">q6</td>
+                                    <td><input type="text" class="rule" value="1Nq0"></td>
+                                    <td><input type="text" class="rule" value="-"></td>
+                                </tr>
 
 
-                        </table>
-                    </div>
-                    <div class="row col-12 mx-auto text-center my-3 text-center">
-                        <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="asym">
+                            </table>
+                        </div>
+                        <div class="row col-12 mx-auto text-center my-3 text-center">
+                            <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto font-weight-bold" id="asym">
         +1 символ
       </button>
-                        <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="rsym">
+                            <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto font-weight-bold" id="rsym">
         -1 символ
       </button>
-                        <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="astate">
+                            <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto font-weight-bold" id="astate">
         +1 состояние
       </button>
-                        <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto my-2 font-weight-bold px-4" id="rstate">
+                            <button class="tablebutton btn btn-outline-success rounded-pill d-block mx-auto font-weight-bold" id="rstate">
         -1 состояние
       </button>
-                    </div>
+                        </div>
 
-                    <h2 class="text-center py-2 mb-3 font-weight-bold">Ввод</h2>
-                    <div id="input_tapeblock" class="mx-auto my-2">
-                        <input type="text" name="tapeinput" id="tapeinput" value="11110111"><label for="tapeinput" accesskey="t"></label>
-                    </div>
-                </form>
+                        <h2 class="text-center py-2 mb-3 font-weight-bold">Ввод</h2>
+                        <div id="input_tapeblock" class="mx-auto my-2">
+                            <input type="text" name="tapeinput" id="tapeinput" value="11110111"><label for="tapeinput" accesskey="t"></label>
+                        </div>
+                    </form>
 
-                <div class="tapeblock mx-auto my-2">
-                    <h2 class="text-center py-2 mb-3 font-weight-bold">Вывод</h2>
-                    <p id="temptape" class="mx-auto my-2"></p>
+                    <div class="tapeblock mx-auto my-2">
+                        <h2 class="text-center py-2 mb-3 font-weight-bold">Вывод</h2>
+                        <p id="temptape" class="mx-auto my-2"></p>
+                    </div>
+                    <div class="row col-12 mx-auto text-center my-3 text-center">
+                        <button id="run" class="btn col-lg btn-success my-2 mx-auto m-md-2">запустить</button>
+                        <button id="clear" class="btn col-lg btn-success my-2 mx-auto m-md-2">очистить</button>
+                        <button id="step" class="btn col-lg btn-success my-2 mx-auto m-md-2">1 шаг</button>
+                    </div>
                 </div>
-                <div class="row col-12 mx-auto text-center my-3 text-center">
-                    <button id="run" class="btn col-lg col-12 btn-success my-2 mx-auto m-md-2">запустить</button>
-                    <button id="clear" class="btn col-lg col-12 btn-success my-2 mx-auto m-md-2">очистить</button>
-                    <button id="step" class="btn col-lg col-12 btn-success my-2 mx-auto m-md-2">1 шаг</button>
-                </div>
+                <script src="/src/turingmachine.js"></script>
             </div>
-            <script src="/src/turingmachine.js"></script>
     </div>
     </body>
 
@@ -139,6 +141,10 @@
      ::selection {
         background: #000;
         color: #fff;
+    }
+    
+    #box {
+        background-color: #fff;
     }
     
      ::-moz-selection {
@@ -178,7 +184,6 @@
     
     body {
         overflow-x: hidden;
-        position: relative;
         margin: 0;
         padding: 0;
         font-family: 'Roboto', sans-serif;
@@ -186,7 +191,8 @@
         font-size: 13px;
         line-height: 20px;
         color: #666;
-        background-color: #fff;
+        background-image: url(img/blur_background_1.png);
+        background-size: cover;
     }
     
     #page {

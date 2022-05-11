@@ -8,7 +8,7 @@ asym.onclick = function() {
     let rlength = table.rows[0].length;
     let ncell = table.rows[0].insertCell(rlength);
     ncell.className = "spectd";
-    ncell.innerHTML = "<input type=\"text\ class=\"symbol\">";
+    ncell.innerHTML = "<input type=\"text\" class=\"symbol\">";
     for (let i = 1; i < table.rows.length; i++) {
         let a = table.rows[i].insertCell(rlength);
         a.innerHTML = "<input type=\"text\" class=\"rule\">";
@@ -293,8 +293,10 @@ step.onclick = function() {
                 switch (mov) {
                     case 'L':
                         step_RWH--;
-                        if (tape[step_RWH] == undefined) { tape.unshift('_');
-                            step_RWH++; }
+                        if (tape[step_RWH] == undefined) {
+                            tape.unshift('_');
+                            step_RWH++;
+                        }
                         break;
                     case 'R':
                         step_RWH++;

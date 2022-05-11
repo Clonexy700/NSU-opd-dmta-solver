@@ -111,13 +111,14 @@
 
 <style>
     header {
-        height: 120px;
+        position: relative;
+        height: 80px;
+        background-color: #fff;
         margin: 80px 0 0 0;
         background: #fff;
         display: inline;
         list-style: none;
         margin-top: 100px;
-        position: absolute;
         width: 100%;
         box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
         text-align: center;
@@ -638,12 +639,6 @@
     /*-----------------------------------------------------------------------------------*/
     /*	HEADER
 /*-----------------------------------------------------------------------------------*/
-    
-    header {
-        position: relative;
-        height: 80px;
-        background-color: #fff;
-    }
     /* __________ Logo __________ */
     
     .logo {
@@ -1278,10 +1273,6 @@
         color: #979797;
     }
     
-    ul.project_info li span {
-        color: #979797;
-    }
-    
     .project_shared {
         padding: 15px 0;
     }
@@ -1584,10 +1575,6 @@
         color: #fff;
         transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out;
-    }
-    
-    .map_hide i {
-        margin: 0 -2px;
     }
     
     .map_hide:hover i {
@@ -2055,8 +2042,6 @@
             background-size: cover !important;
         }
     }
-    
-    @media (max-width: 1024px) {}
     
     @media (min-width: 992px) and (max-width: 1199px) {
         .parallax,
@@ -2588,46 +2573,6 @@
             margin: 0 auto;
         }
         /* __________ Blog __________ */
-        .blog_post_descr hr {
-            margin: 15px 0;
-        }
-        .blog_post_img {
-            width: 200px;
-            height: 157px;
-            margin-right: 20px;
-        }
-        .blog_post_title {
-            font-size: 19px;
-            line-height: 22px;
-        }
-        .blog_post_descr hr {
-            clear: both;
-            border: 0;
-        }
-        .blog_post_content {
-            font-size: 14px;
-            line-height: 22px;
-        }
-        .blog_post_info li a {
-            font-size: 13px;
-        }
-        .blog_post_info li {
-            padding-right: 15px;
-        }
-        .blog_post_info li:before {
-            right: 6px;
-        }
-        .blog_post_content {
-            padding-top: 20px;
-        }
-        .pagination li {
-            width: 40px;
-            height: 40px;
-        }
-        .pagination li a {
-            font-size: 16px;
-            line-height: 38px;
-        }
         .pagination li.active a,
         .pagination li a:focus,
         .pagination li a:hover {
@@ -2640,10 +2585,6 @@
         /* __________ Single Blog Post __________ */
         .single_blog_post_date {
             margin: 0;
-        }
-        .single_blog_post_title {
-            font-size: 26px;
-            line-height: 32px;
         }
         .comment_note {
             padding: 0 0 20px;

@@ -1,12 +1,12 @@
 echo "Building!"
 
-rm fss_build.zip 2> /dev/null
-mkdir fss_build
+rm dmta_mlita_project_version_2.zip 2> /dev/null
+mkdir dmta_mlita_project_version_2
 
-cp index.html fss_build
-cp main.css fss_build
-cp -r src fss_build
+cp index.html dmta_mlita_project_version_2
+cp main.css dmta_mlita_project_version_2
+cp -r src dmta_mlita_project_version_2
 
-zip -r fss_build.zip fss_build
-rm -r fss_build
+zip -r dmta_mlita_project_version_2.zip dmta_mlita_project_version_2
+rm -r dmta_mlita_project_version_2
 

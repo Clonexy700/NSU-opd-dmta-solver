@@ -59,6 +59,7 @@ body {
     color: #666;
     background-image: url(/img/blur_background_1.png);
     background-size: cover;
+    padding-top: 8%;
 }
 
 #page {
@@ -425,16 +426,6 @@ blockquote:before {
 
 
 /*-----------------------------------------------------------------------------------*/
-
-
-/*	HEADER
-/*-----------------------------------------------------------------------------------*/
-
-header {
-    position: relative;
-    height: 80px;
-    background-color: #fff;
-}
 
 
 /* __________ Logo __________ */
@@ -1912,119 +1903,6 @@ footer h4 {
         padding-left: 15px;
         padding-right: 15px;
     }
-    /* __________ Index __________ */
-    .cleancode_block p.title {
-        font-size: 70px;
-        line-height: 70px;
-    }
-    .cleancode_block .nav-tabs li a {
-        width: 136px;
-        height: 136px;
-        padding-top: 35px;
-    }
-    .cleancode_block .nav-tabs li a i {
-        width: 45px;
-        height: 45px;
-    }
-    .cleancode_block .nav-tabs li a span {
-        font-size: 16px;
-    }
-    .cleancode_block .nav-tabs li a i {
-        background-position: 0 -45px;
-    }
-    .nav-tabs li a:hover i {
-        background-position: 0 -90px;
-        transform: translateY(-5px);
-        -o-transform: translateY(-5px);
-        -ms-transform: translateY(-5px);
-        -webkit-transform: translateY(-5px);
-    }
-    .nav-tabs li.active a i {
-        background-position: 0 0;
-        transform: translateY(-10px);
-        -o-transform: translateY(-10px);
-        -ms-transform: translateY(-10px);
-        -webkit-transform: translateY(-10px);
-    }
-    .purpose_block p {
-        font-size: 15px;
-        line-height: 22px;
-    }
-    .work_item a.zoom {
-        width: 40px;
-        height: 24px;
-        margin-left: -20px;
-    }
-    .work_item:hover a.zoom {
-        bottom: 30px;
-    }
-    .img_wrapper {
-        width: 137px !important;
-    }
-    .post_item_img a.link {
-        width: 40px;
-        height: 24px;
-        margin: 0 0 -12px -20px;
-    }
-    .post_item_img a.link:hover {
-        background-position: 0 -24px;
-    }
-    .post_item_content a.title {
-        font-size: 19px;
-        line-height: 24px;
-    }
-    .owl-theme .owl-controls {
-        top: -69px;
-    }
-    .owl-theme .owl-controls .owl-buttons div {
-        width: 50px;
-        height: 50px;
-    }
-    .owl-theme .owl-controls .owl-buttons div:before {
-        width: 48px;
-        height: 48px;
-        line-height: 46px;
-    }
-    /* __________ Blog __________ */
-    .blog_post_descr hr {
-        margin: 15px 0;
-    }
-    .blog_post_img {
-        width: 400px;
-        height: 314px;
-    }
-    .blog_post_title {
-        font-size: 24px;
-        line-height: 27px;
-    }
-    .blog_post_content {
-        font-size: 14px;
-        line-height: 22px;
-    }
-    .single_blog_post_title {
-        font-size: 44px;
-        line-height: 50px;
-    }
-    /* __________ Sidebar __________ */
-    .widget_meta li a {
-        font-size: 17px;
-        line-height: 20px;
-    }
-    .post_item_img_widget {
-        width: 220px;
-        height: 146px;
-    }
-    .post_item_content_widget a.title {
-        font-size: 16px;
-        line-height: 20px;
-    }
-    /* __________ All Styles __________ */
-    .breadcrumbs_block {
-        padding: 50px 0;
-    }
-    .map_hide {
-        margin-left: 435px;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2687,92 +2565,8 @@ h6 {
     color: #333;
 }
 
-h1 {
-    margin: 0 0 26px;
-    line-height: 46px;
-    font-size: 46px;
-}
-
-h2 {
-    margin: 0 0 26px;
-    line-height: 40px;
-    font-size: 40px;
-}
-
-h2 b {
-    font-weight: 500;
-}
-
-h3 {
-    margin: 0 0 21px;
-    line-height: 25px;
-    font-size: 22px;
-}
-
-h3 b {
-    font-weight: 900;
-}
-
-h4 {
-    margin: 0 0 34px;
-    line-height: 25px;
-    font-size: 20px;
-}
-
-h4 b {
-    font-weight: 500;
-}
-
-h5 {
-    margin: 0 0 15px;
-    line-height: 20px;
-    font-size: 15px;
-}
-
-h6 {
-    margin: 0 0 15px;
-    line-height: 20px;
-    font-size: 12px;
-}
-
-.center {
-    text-align: center;
-}
-
 .right {
     text-align: right;
-}
-
-.color_text {
-    color: #30a67c;
-}
-
-.color_dark {
-    color: #505050;
-}
-
-.color_light {
-    color: #979797;
-}
-
-.color_white {
-    color: #fff;
-}
-
-.color_red {
-    color: #c10707;
-}
-
-.color_yellow {
-    color: #fec400;
-}
-
-.color_bg {
-    background: #30a67c;
-}
-
-body {
-    padding-top: 8%;
 }
 
 header {
@@ -2784,10 +2578,6 @@ header {
     z-index: 999px;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
     text-align: center;
-}
-
-h1 {
-    padding-top: 3%;
 }
 
 ul {

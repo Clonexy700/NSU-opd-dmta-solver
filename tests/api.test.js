@@ -1,10 +1,5 @@
 import { _API } from '../src/api.js';
 
-let chai = require("chai");
-let chaiAsPromised = require("chai-as-promised");
-chai.use(chaiAsPromised);
-let expect = chai.expect;
-
 var API = new _API();
 
 beforeEach(() => {

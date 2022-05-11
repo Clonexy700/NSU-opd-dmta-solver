@@ -5,11 +5,6 @@ import { Point } from '../src/lib/geometry.js';
 import { Node, Arrow } from '../src/elements.js';
 import { initAPI, API } from '../src/api.js';
 
-let chai = require("chai");
-let chaiAsPromised = require("chai-as-promised");
-chai.use(chaiAsPromised);
-let expect = chai.expect;
-
 beforeEach(() => {
     localStorage = new Map();
     canvasManager.init(buildFakeCanvas());

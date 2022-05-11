@@ -151,11 +151,7 @@
 </html>
 
 <style>
-    /*-----------------------------------------------------------------------------------*/
-    /*	GENERAL STYLING
-/*-----------------------------------------------------------------------------------*/
-    
-     ::selection {
+         ::selection {
         background: #000;
         color: #fff;
     }
@@ -203,13 +199,10 @@
         overflow-x: hidden;
         margin: 0;
         padding: 0;
-        font-family: 'Roboto', sans-serif;
         font-weight: 300;
         font-size: 13px;
         line-height: 20px;
         color: #666;
-        background-image: url('https://mca.nsu.ru/mmfstyle/images/tild3561-6531-4139-a530-653764333734___916.svg');
-        background-size: cover;
         padding-top: 2%;
     }
     
@@ -415,14 +408,13 @@
         margin: 0 0 20px;
     }
     
-    h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
         margin-top: 0;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'titillium-web';
         text-transform: none;
         font-weight: 300;
         color: #333;
@@ -432,6 +424,7 @@
         margin: 0 0 26px;
         line-height: 46px;
         font-size: 46px;
+        color: #fff
     }
     
     h2 {
@@ -560,12 +553,6 @@
     /*-----------------------------------------------------------------------------------*/
     /*	HEADER
 /*-----------------------------------------------------------------------------------*/
-    
-    header {
-        position: relative;
-        height: 80px;
-        background-color: #fff;
-    }
     /* __________ Logo __________ */
     
     .logo {
@@ -576,7 +563,7 @@
         text-transform: uppercase;
         line-height: 80px;
         font-size: 26px;
-        color: #333;
+        color: #fff;
     }
     
     .logo a span {
@@ -630,14 +617,14 @@
         font-weight: 900;
         line-height: 20px;
         font-size: 13px;
-        color: #666;
+        color: #fff;
         transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out;
     }
     
     .navmenu li:hover a,
     .navmenu li.active a {
-        color: #333;
+        color: #1c1c1c;
     }
     /* Sub menu */
     
@@ -667,7 +654,7 @@
         height: 0;
         border-left: 6px solid transparent;
         border-right: 7px solid transparent;
-        border-bottom: 6px solid #1c1c1c;
+        border-bottom: 6px solid;
     }
     
     .sub-menu ul li {
@@ -684,7 +671,7 @@
         font-weight: 400;
         text-align: left;
         font-size: 12px;
-        color: #999 !important;
+        color: #fff !important;
         background: #1c1c1c;
         border-bottom: 1px solid #282828;
     }
@@ -727,7 +714,7 @@
         margin: 0;
         padding: 11px 0;
         text-transform: none;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'titillium-web';
         font-weight: 300;
         line-height: 20px;
         font-size: 13px;
@@ -949,7 +936,7 @@
     
     .cleancode_block .nav-tabs li a span {
         display: block;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'titillium-web';
         font-weight: 400;
         line-height: 20px;
         font-size: 20px;
@@ -1143,7 +1130,7 @@
         height: 50px;
         margin: 0 -2px 0 -3px;
         border: 2px solid #ccc;
-        font-family: FontAwesome;
+        font-family: 'titillium-web';
         transition: all 0.2s ease-in-out;
         -webkit-transition: all 0.2s ease-in-out;
     }
@@ -1194,10 +1181,6 @@
         margin-bottom: 3px;
         font-style: italic;
         color: #505050;
-    }
-    
-    ul.project_info li span {
-        color: #979797;
     }
     
     ul.project_info li span {
@@ -1492,7 +1475,7 @@
         height: 50px;
         margin-left: 525px;
         background-color: #333;
-        font-family: FontAwesome;
+        font-family: 'titillium-web';
         text-align: center;
     }
     
@@ -1506,10 +1489,6 @@
         color: #fff;
         transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out;
-    }
-    
-    .map_hide i {
-        margin: 0 -2px;
     }
     
     .map_hide:hover i {
@@ -1977,8 +1956,6 @@
             background-size: cover !important;
         }
     }
-    
-    @media (max-width: 1024px) {}
     
     @media (min-width: 992px) and (max-width: 1199px) {
         .parallax,
@@ -2510,46 +2487,6 @@
             margin: 0 auto;
         }
         /* __________ Blog __________ */
-        .blog_post_descr hr {
-            margin: 15px 0;
-        }
-        .blog_post_img {
-            width: 200px;
-            height: 157px;
-            margin-right: 20px;
-        }
-        .blog_post_title {
-            font-size: 19px;
-            line-height: 22px;
-        }
-        .blog_post_descr hr {
-            clear: both;
-            border: 0;
-        }
-        .blog_post_content {
-            font-size: 14px;
-            line-height: 22px;
-        }
-        .blog_post_info li a {
-            font-size: 13px;
-        }
-        .blog_post_info li {
-            padding-right: 15px;
-        }
-        .blog_post_info li:before {
-            right: 6px;
-        }
-        .blog_post_content {
-            padding-top: 20px;
-        }
-        .pagination li {
-            width: 40px;
-            height: 40px;
-        }
-        .pagination li a {
-            font-size: 16px;
-            line-height: 38px;
-        }
         .pagination li.active a,
         .pagination li a:focus,
         .pagination li a:hover {
@@ -2562,10 +2499,6 @@
         /* __________ Single Blog Post __________ */
         .single_blog_post_date {
             margin: 0;
-        }
-        .single_blog_post_title {
-            font-size: 26px;
-            line-height: 32px;
         }
         .comment_note {
             padding: 0 0 20px;
@@ -2733,9 +2666,4 @@
         .col-ss-1 {
             width: 8.333333333333332%;
         }
-    }
-    
-    #burd {
-        height: 800px;
-    }
 </style>

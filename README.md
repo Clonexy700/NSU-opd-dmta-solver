@@ -11,7 +11,7 @@
 <p align="center">
 
 [![tests](https://github.com/Clonexy700/NSU-opd-dmta-solver/actions/workflows/main.yml/badge.svg)](https://github.com/Clonexy700/NSU-opd-dmta-solver/actions/workflows/main.yml)
-<img alt="GitHub workflow status" src="https://img.shields.io/github/workflow/status/Clonexy700/NSU-opd-dmta-solver/Tests?label=tests">
+[![build](https://github.com/Clonexy700/NSU-opd-dmta-solver/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Clonexy700/NSU-opd-dmta-solver/actions/workflows/pages/pages-build-deployment)
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Clonexy700/NSU-opd-dmta-solver?style=flat-square">
 
 </p>

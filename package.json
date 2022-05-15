@@ -1,7 +1,7 @@
 {
-    "name": "@shailpatels/fss",
+    "name": "@clonexy700/nsu-opd-dmta-solver",
     "version": "1.0.5",
-    "description": "Finite State Simulator",
+    "description": "DMTA Solver",
     "main": "canvas.js",
     "directories": {
         "test": "tests"
@@ -20,9 +20,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/shailpatels/FSS.git"
+        "url": "git+https://github.com/Clonexy700/NSU-opd-dmta-solver.git"
     },
-    "author": "Shail Patel",
+    "author": "Georgiy Dedov",
     "license": "GPL-3.0",
     "homepage": "https://clonexy700.github.io/dmta_mlita_project_version_nativejs",
     "keywords": [

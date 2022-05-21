@@ -1,3 +1,44 @@
-site_name: My Docs
+site_name: SOLVER документация
+site_description: Customizable and convenient service for working with mathematical calculations from the DMTA field
+repo_name: Clonexy700/NSU-opd-dmta-solver
+site_author: clonexy700
+repo_url: https://github.com/Clonexy700/NSU-opd-dmta-solver
+
 theme:
-  name: mkdocs
+  name: material
+  language: ru
+
+  palette:
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: fontawesome/solid/sun
+        name: Светлый режим
+    - scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: fontawesome/solid/moon
+        name: Тёмный режим
+  font:
+    text: Roboto Mono
+    code: Monaco
+
+
+extra:
+  disqus: ""
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/cloxintoxin
+      name: поддержка
+
+extra_css:
+  - _css/style.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      check_paths: true

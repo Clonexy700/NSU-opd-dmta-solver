@@ -16,7 +16,7 @@
     },
     "scripts": {
         "test": "npx jest  --config jest.config.js --coverage",
-        "build": "sh ./build.sh"
+        "build": "./build.sh"
     },
     "repository": {
         "type": "git",

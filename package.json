@@ -1,6 +1,6 @@
 {
     "name": "@clonexy700/nsu-opd-dmta-solver",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "description": "DMTA Solver",
     "main": "canvas.js",
     "directories": {
